@@ -1,0 +1,112 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  overflow: hidden;
+  color: #333;
+  font-family: "Maven Pro", monosapce;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.center {
+  position: fixed;
+  z-index: 30;
+  top: 15%;
+  bottom: 15%;
+  transform: scale(0);
+  left: 10%;
+  right: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  padding: 2rem 2rem 0rem 2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, .5);
+  animation: show_modal 0.6s forwards;
+}
+.center.hide {
+  animation: hide_modal 0.6s forwards;
+}
+@keyframes show_modal {
+  0% {
+    transform: scale(0);
+ }
+  60% {
+    transform: scale(1.15);
+ }
+  80% {
+    transform: scale(0.95);
+ }
+  100% {
+    transform: scale(1);
+ }
+}
+@keyframes hide_modal {
+  0% {
+    transform: scale(1);
+ }
+  20% {
+    transform: scale(1.3);
+ }
+  100% {
+    transform: scale(0);
+ }
+}
+.loading{
+  color:black;
+}
+ .error-message{
+   color:black;
+   }
+.sent-message{
+  color:black;
+}
+
+.error-message-img{
+   display: none;
+}
+.sent-message-img{
+   display: none;
+}
+
+.center .error-message{
+  display:none;
+}
+.center .sent-message{
+  display:none;
+}
+.center p {
+  text-align: center;
+  line-height: 1.5rem;
+  letter-spacing: 0.01rem;
+}
+.center big {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+.center button {
+  position: absolute;
+  border: none;
+  width: 100%;
+  bottom: -1px;
+  padding: 0.8rem;
+  cursor: pointer;
+  color: white;
+  background-color: #EF7F67;
+  display: block;
+  vertical-align: bottom;
+  transition: background 0.3s ease-in-out;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.center button:hover {
+  background-color: #ec3434;
+}
